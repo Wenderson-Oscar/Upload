@@ -17,11 +17,11 @@ class PessoaViewSets(viewsets.ModelViewSet):
         file = pd.read_excel(file1,engine='openpyxl')
         for i in range(len(file)):
             nascimento = file['nascimento'][i]
-            date = datetime.fromtimestamp(nascimento/1e3)
+            data = datetime.fromtimestamp(nascimento/1e3)
             cadastro = Pessoa(codigo = file['id'][i], nome = file['nome'][i],
             sobrenome = file['sobrenome'][i], sexo = file['sexo'][i],
             altura = file['altura'][i], peso = file['peso'][i],
-            nascimento = date, bairro = file['bairro'][i],
+            nascimento = data, bairro = file['bairro'][i],
             cidade = file['cidade'][i], estado = file['estado'][i],
             numero = file['numero'][i], file = file1)
             cadastro.save()
