@@ -6,6 +6,8 @@
 
 * [Demostração em Vídeo](https://drive.google.com/file/d/16pbhGarpLmSUhkxluq0BqtAS_53I-xN1/view?usp=share_link)
 
+🏫 Atividade acâdemica
+
 ## Tecnologias Utilizadas
 
 <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white">
