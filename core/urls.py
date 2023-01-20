@@ -15,15 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from rest_framework import routers
-from upload.api.viewsets import PersonViewSet, MulheresViewSet, NascimentoViewSet
+from upload.api.viewsets import PessoaViewSets, MulhereViewSets, NascimentoViewSets
 
 router = routers.DefaultRouter()
-router.register('Upload/', PersonViewSet)
-router.register('Mulheres/', MulheresViewSet, basename='Pessoa')
-router.register('Nascimento/', NascimentoViewSet, basename='Pessoa1')
+router.register('Upload', PessoaViewSets)
+router.register('Mulheres', MulhereViewSets, basename='Pessoa')
+router.register('Nascimento', NascimentoViewSets, basename='Pessoa1')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

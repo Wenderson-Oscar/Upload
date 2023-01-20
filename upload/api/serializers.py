@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from upload.models import Person
+from upload.models import Pessoa
 
-class PersonSerializer(serializers.ModelSerializer):
+class PessoaSerializes(serializers.ModelSerializer):
     class Meta:
-        model= Person
+        model= Pessoa
         fields= '__all__'
     
