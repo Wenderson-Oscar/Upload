@@ -26,7 +26,7 @@ Linux:
 git clone https://github.com/Wenderson-Oscar/Upload.git
 virtualenv env
 . env/bin/activate
-pip install -r requirementes.txt
+pip install -r requirements.txt
 ```
 
 Windows:
@@ -34,7 +34,7 @@ Windows:
 git clone https://github.com/Wenderson-Oscar/Upload.git
 python -m venv env
 env\Scripts\activate
-pip install -r requirementes.txt
+pip install -r requirements.txt
 ```
 
 ## ☕ Como Utlizar a Aplicação
